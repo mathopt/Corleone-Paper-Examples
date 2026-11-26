@@ -1,0 +1,13 @@
+UDE: weights = 21, observations = 102, initial MSE = 139.91627383195262, final MSE = 0.0025346686771332864, iterations = 100, retcode = MaxIters
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  79.505 ms … 127.328 ms  ┊ GC (min … max): 16.14% … 24.84%
+ Time  (median):     82.582 ms               ┊ GC (median):    18.26%
+ Time  (mean ± σ):   88.229 ms ±  14.173 ms  ┊ GC (mean ± σ):  16.43% ±  6.64%
+
+     █                                                          
+  ▆▁▁█▆▁▁▆▁▆▁▁▁▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▆ ▁
+  79.5 ms         Histogram: frequency by time          127 ms <
+
+ Memory estimate: 231.56 MiB, allocs estimate: 3407281.
+
+saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/ude-fit.pdf

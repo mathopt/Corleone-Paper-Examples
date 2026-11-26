@@ -1,0 +1,186 @@
+
+=== fishing_single_shooting
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+Single shooting: objective = 1.3456328789516294, iterations = 141, variables = 48
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  328.755 ms … 347.130 ms  ┊ GC (min … max): 10.68% … 6.58%
+ Time  (median):     334.009 ms               ┊ GC (median):    10.04%
+ Time  (mean ± σ):   334.184 ms ±   5.108 ms  ┊ GC (mean ± σ):   9.61% ± 1.37%
+
+  ▁  ▁   ▁    ▁    ██      ▁                                  ▁  
+  █▁▁█▁▁▁█▁▁▁▁█▁▁▁▁██▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  329 ms           Histogram: frequency by time          347 ms <
+
+ Memory estimate: 487.32 MiB, allocs estimate: 6080777.
+
+
+=== fishing_multiple_shooting
+Multiple shooting: objective = 1.3456313301016707, max. continuity residual = 6.108940020510545e-10, iterations = 197, variables = 59, threads = 4
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  402.278 ms … 680.278 ms  ┊ GC (min … max): 14.90% … 37.89%
+ Time  (median):     415.221 ms               ┊ GC (median):    15.15%
+ Time  (mean ± σ):   463.153 ms ±  92.816 ms  ┊ GC (mean ± σ):  19.70% ±  7.26%
+
+  ▁███                  ▁            ▁                        ▁  
+  ████▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  402 ms           Histogram: frequency by time          680 ms <
+
+ Memory estimate: 1.39 GiB, allocs estimate: 14148625.
+
+
+=== fishing_multiple_shooting_sparse_jacobian
+Sparsity: constraint Jacobian 11×59 with 154 nonzeros (23.7 %)
+Multiple shooting (sparse Jacobian): objective = 1.3456313299286276, max. continuity residual = 6.963924992220427e-10, iterations = 197, variables = 59, threads = 4
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  331.227 ms … 556.330 ms  ┊ GC (min … max): 15.32% … 40.36%
+ Time  (median):     336.674 ms               ┊ GC (median):    15.72%
+ Time  (mean ± σ):   373.446 ms ±  77.963 ms  ┊ GC (mean ± σ):  20.37% ±  7.89%
+
+  █▄                                                             
+  ██▁▁▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▆ ▁
+  331 ms           Histogram: frequency by time          556 ms <
+
+ Memory estimate: 1022.47 MiB, allocs estimate: 10732266.
+
+
+=== fishing_multiple_shooting_sparse_hessian
+Sparsity: constraint Jacobian 11×59 with 154 nonzeros (23.7 %), Lagrangian Hessian 59×59 with 889 nonzeros (25.5 %)
+Multiple shooting (sparse, exact Hessian): objective = 1.345633222930794, max. continuity residual = 2.4413589727600993e-7, iterations = 51, variables = 59, threads = 4
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  497.589 ms … 703.258 ms  ┊ GC (min … max): 14.60% … 37.24%
+ Time  (median):     599.955 ms               ┊ GC (median):    29.75%
+ Time  (mean ± σ):   601.160 ms ±  90.628 ms  ┊ GC (mean ± σ):  29.21% ± 10.19%
+
+  ▁   ▁ █ ▁                                          ▁▁  ▁   ▁▁  
+  █▁▁▁█▁█▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██▁▁█▁▁▁██ ▁
+  498 ms           Histogram: frequency by time          703 ms <
+
+ Memory estimate: 2.16 GiB, allocs estimate: 6068163.
+
+
+=== fishing_cia
+Single shooting: objective = 1.3456328789516294, iterations = 141, variables = 48
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  341.156 ms … 435.378 ms  ┊ GC (min … max):  9.85% … 15.89%
+ Time  (median):     347.416 ms               ┊ GC (median):    11.15%
+ Time  (mean ± σ):   363.963 ms ±  31.601 ms  ┊ GC (mean ± σ):  10.16% ±  3.96%
+
+  ▃   █                                                          
+  █▁▁▇█▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▇▁▁▁▁▁▁▁▁▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▇ ▁
+  341 ms           Histogram: frequency by time          435 ms <
+
+ Memory estimate: 487.32 MiB, allocs estimate: 6080777.
+
+Relaxed: objective = 1.3456328789516294, fractional control values (1e-3 < u < 1 - 1e-3) = 33 of 48
+Rounded: objective = 1.3640831845272814, switches = 6, integral deviation = 0.12193688814399323, gap to relaxed = 0.01845030557565197
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  119.739 μs … 172.899 μs  ┊ GC (min … max): 0.00% … 0.00%
+ Time  (median):     122.973 μs               ┊ GC (median):    0.00%
+ Time  (mean ± σ):   127.929 μs ±  15.985 μs  ┊ GC (mean ± σ):  0.00% ± 0.00%
+
+   █ ▃                                                           
+  ▇█▁█▁▇▇▁▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▇ ▁
+  120 μs           Histogram: frequency by time          173 μs <
+
+ Memory estimate: 241.79 KiB, allocs estimate: 4504.
+
+
+=== ude
+UDE: weights = 21, observations = 102, initial MSE = 139.91627383195262, final MSE = 0.0025346686771332864, iterations = 100, retcode = MaxIters
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  87.009 ms … 113.956 ms  ┊ GC (min … max): 20.01% … 22.90%
+ Time  (median):     95.837 ms               ┊ GC (median):    19.11%
+ Time  (mean ± σ):   98.948 ms ±  10.316 ms  ┊ GC (mean ± σ):  18.34% ± 11.17%
+
+  ▁ ▁     ▁    ▁ ▁       ▁       ▁                       █   ▁  
+  █▁█▁▁▁▁▁█▁▁▁▁█▁█▁▁▁▁▁▁▁█▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁█ ▁
+  87 ms           Histogram: frequency by time          114 ms <
+
+ Memory estimate: 231.56 MiB, allocs estimate: 3407281.
+
+
+=== oed
+OED: A-criterion = 0.03700127612160643, budgets = [4.000000024466906, 4.000000025067275], iterations = 34, baseline = 0.16058611702319903, improvement = 4.34001563879649
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  532.650 ms … 734.093 ms  ┊ GC (min … max): 22.60% … 17.27%
+ Time  (median):     535.285 ms               ┊ GC (median):    22.62%
+ Time  (mean ± σ):   559.777 ms ±  62.713 ms  ┊ GC (mean ± σ):  22.46% ±  2.44%
+
+  █                                                              
+  █▄▁▄▁▁▁▁▁▁▁▁▁▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▄ ▁
+  533 ms           Histogram: frequency by time          734 ms <
+
+ Memory estimate: 1.31 GiB, allocs estimate: 5798763.
+
+
+=== oed_cia
+OED: A-criterion = 0.03700127612160643, budgets = [4.000000024466906, 4.000000025067275], iterations = 34, baseline = 0.16058611702319903, improvement = 4.34001563879649
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  535.361 ms … 752.033 ms  ┊ GC (min … max): 22.71% … 17.19%
+ Time  (median):     538.892 ms               ┊ GC (median):    23.64%
+ Time  (mean ± σ):   561.691 ms ±  67.199 ms  ┊ GC (mean ± σ):  22.59% ±  2.03%
+
+  █                                                              
+  ██▅▁▁▁▅▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▅ ▁
+  535 ms           Histogram: frequency by time          752 ms <
+
+ Memory estimate: 1.31 GiB, allocs estimate: 5798763.
+
+w1: fractional relaxed weights (1e-3 < w < 1 - 1e-3) = 0 of 48, max. distance to 0 or 1 = 1.5459771592896132e-6
+w2: fractional relaxed weights (1e-3 < w < 1 - 1e-3) = 0 of 48, max. distance to 0 or 1 = 1.4914460939596808e-6
+Relaxed:  A-criterion = 0.03700127612160643, budgets = [4.000000024466906, 4.000000025067275]
+Rounded:  A-criterion = 0.03700127560006225, budgets = [4.0, 4.0]
+Note: sum-up rounding can exceed the budget of 4 by at most half an interval (0.125).
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  216.728 μs … 370.186 μs  ┊ GC (min … max): 0.00% … 0.00%
+ Time  (median):     223.243 μs               ┊ GC (median):    0.00%
+ Time  (mean ± σ):   238.098 μs ±  46.593 μs  ┊ GC (mean ± σ):  0.00% ± 0.00%
+
+   ▃█ ▃                                                          
+  ▇██▁█▇▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▇ ▁
+  217 μs           Histogram: frequency by time          370 μs <
+
+ Memory estimate: 606.52 KiB, allocs estimate: 11135.
+
+
+=== fishing_minlp
+MINLP: objective = 1.3523623975542183, retcode = Success, branches = 52, u = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  82.550 s …   83.582 s  ┊ GC (min … max): 22.27% … 22.51%
+ Time  (median):     83.419 s               ┊ GC (median):    22.57%
+ Time  (mean ± σ):   83.313 s ± 305.643 ms  ┊ GC (mean ± σ):  22.57% ±  0.12%
+
+  ▁                              ▁        ▁ ▁      ▁█     █ ▁  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁█▁█▁▁▁▁▁▁██▁▁▁▁▁█▁█ ▁
+  82.6 s          Histogram: frequency by time         83.6 s <
+
+ Memory estimate: 123.40 GiB, allocs estimate: 224330590.
+
+
+Julia Version 1.12.7
+Commit 6d172b025e4 (2026-08-15 08:05 UTC)
+Build Info:
+  Official https://julialang.org release
+Platform Info:
+  OS: Linux (x86_64-linux-gnu)
+  CPU: 16 × AMD Ryzen 7 8700F 8-Core Processor
+  WORD_SIZE: 64
+  LLVM: libLLVM-18.1.7 (ORCJIT, znver3)
+  GC: Built with stock GC
+Threads: 4 default, 1 interactive, 4 GC (on 16 virtual cores)
+example                       samples      min [s]   median [s] memory [MiB]
+fishing_single_shooting            10       0.3288       0.3340        487.3
+fishing_multiple_shooting          10       0.4023       0.4152       1426.6
+fishing_multiple_shooting_sparse_jacobian       10       0.3312       0.3367       1022.5
+fishing_multiple_shooting_sparse_hessian       10       0.4976       0.6000       2215.9
+fishing_cia                        10       0.0001       0.0001          0.2
+ude                                10       0.0870       0.0958        231.6
+oed                                10       0.5326       0.5353       1345.4
+oed_cia                            10       0.0002       0.0002          0.6
+fishing_minlp                      10      82.5501      83.4189     126358.7

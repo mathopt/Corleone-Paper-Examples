@@ -1,0 +1,36 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+K =  0  dense   variables =  48  iterations =  141  objective = 1.345633  ok  median = 0.335 s
+K =  1  dense   variables =  51  iterations =  177  objective = 1.345631  ok  median = 0.719 s
+K =  1  sparse  variables =  51  iterations =  134  objective = 1.345631  ok  median = 0.455 s
+K =  3  dense   variables =  57  iterations =  120  objective = 1.345631  ok  median = 0.297 s
+K =  3  sparse  variables =  57  iterations =  167  objective = 1.345631  ok  median = 0.318 s
+K =  5  dense   variables =  63  iterations =  129  objective = 1.345631  ok  median = 0.311 s
+K =  5  sparse  variables =  63  iterations =  128  objective = 1.345631  ok  median = 0.246 s
+K = 11  dense   variables =  81  iterations =  136  objective = 1.345631  ok  median = 0.432 s
+K = 11  sparse  variables =  81  iterations =  120  objective = 1.345631  ok  median = 0.259 s
+K = 23  dense   variables = 117  iterations =   96  objective = 1.345631  ok  median = 0.538 s
+K = 23  sparse  variables = 117  iterations =  175  objective = 1.345631  ok  median = 0.584 s
+K = 47  dense   variables = 189  iterations =   82  objective = 1.345631  ok  median = 1.119 s
+K = 47  sparse  variables = 189  iterations =   82  objective = 1.345631  ok  median = 0.607 s
+
+threads = 8
+nodes jacobian  variables    iter.    objective   median [s]
+    0       --         48      141     1.345633        0.335
+    1    dense         51      177     1.345631        0.719
+    1   sparse         51      134     1.345631        0.455
+    3    dense         57      120     1.345631        0.297
+    3   sparse         57      167     1.345631        0.318
+    5    dense         63      129     1.345631        0.311
+    5   sparse         63      128     1.345631        0.246
+   11    dense         81      136     1.345631        0.432
+   11   sparse         81      120     1.345631        0.259
+   23    dense        117       96     1.345631        0.538
+   23   sparse        117      175     1.345631        0.584
+   47    dense        189       82     1.345631        1.119
+   47   sparse        189       82     1.345631        0.607

@@ -1,0 +1,20 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+OED: A-criterion = 0.03700127612160643, budgets = [4.000000024466906, 4.000000025067275], iterations = 34, baseline = 0.16058611702319903, improvement = 4.34001563879649
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  459.126 ms …    1.199 s  ┊ GC (min … max): 13.47% … 50.09%
+ Time  (median):     465.044 ms               ┊ GC (median):    14.01%
+ Time  (mean ± σ):   588.369 ms ± 236.076 ms  ┊ GC (mean ± σ):  21.55% ± 11.40%
+
+  █                                                              
+  █▁▁▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▄▄▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▄ ▁
+  459 ms           Histogram: frequency by time           1.2 s <
+
+ Memory estimate: 1.31 GiB, allocs estimate: 5798765.
+
+saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/oed-optimal-design.pdf

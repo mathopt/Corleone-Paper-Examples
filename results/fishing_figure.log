@@ -1,0 +1,33 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+Single shooting: objective = 1.3456328789516294, iterations = 141, variables = 48
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  335.753 ms … 407.865 ms  ┊ GC (min … max):  9.22% … 7.88%
+ Time  (median):     340.400 ms               ┊ GC (median):    10.26%
+ Time  (mean ± σ):   347.974 ms ±  21.543 ms  ┊ GC (mean ± σ):   9.64% ± 1.37%
+
+  ▁▁▁██      █                                                ▁  
+  █████▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  336 ms           Histogram: frequency by time          408 ms <
+
+ Memory estimate: 487.32 MiB, allocs estimate: 6080777.
+
+Multiple shooting: objective = 1.3456313301016707, max. continuity residual = 6.108940020510545e-10, iterations = 197, variables = 59, threads = 4
+BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
+ Range (min … max):  431.078 ms … 673.814 ms  ┊ GC (min … max): 16.50% … 40.73%
+ Time  (median):     455.823 ms               ┊ GC (median):    16.38%
+ Time  (mean ± σ):   489.196 ms ±  83.625 ms  ┊ GC (mean ± σ):  20.89% ±  7.69%
+
+  ▁ █ ▁ █▁  ▁                                   ▁             ▁  
+  █▁█▁█▁██▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  431 ms           Histogram: frequency by time          674 ms <
+
+ Memory estimate: 1.39 GiB, allocs estimate: 14148625.
+
+saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/fishing-single-shooting.pdf
+saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/fishing-multiple-shooting-initial.pdf
