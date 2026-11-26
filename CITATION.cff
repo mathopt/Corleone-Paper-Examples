@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these examples, please cite them as below."
+type: software
+title: "Corleone.jl: examples and benchmarks"
+abstract: >-
+  Example scripts, pinned Julia environment, and benchmark results for
+  Corleone.jl v2.1.0: optimal control of the Lotka-Volterra fishing problem
+  with single and multiple shooting and integer controls, a universal
+  differential equation trained with CorleoneInverse.jl, and optimal
+  experimental design with CorleoneOED.jl.
+version: v1.0.0
+license: MIT
+repository-code: https://github.com/mathopt/Corleone-Paper-Examples
+doi: 10.5281/zenodo.24551107
+keywords:
+  - Julia
+  - optimal control
+  - multiple shooting
+  - scientific machine learning
+  - optimal experimental design
+authors:
+  - {given-names: Carl Julius, family-names: Martensen, affiliation: "Otto von Guericke University Magdeburg"}
+  - {given-names: Christoph, family-names: Plate, affiliation: "Max Planck Institute for Dynamics of Complex Technical Systems"}
+  - {given-names: Christian, family-names: Kirches, affiliation: "Braunschweig University of Technology"}
+  - {given-names: Andreas, family-names: Potschka, affiliation: "Clausthal University of Technology"}
+  - {given-names: Christopher Vincent, family-names: Rackauckas, affiliation: "Massachusetts Institute of Technology"}
+  - {given-names: Sebastian, family-names: Sager, affiliation: "Otto von Guericke University Magdeburg"}
