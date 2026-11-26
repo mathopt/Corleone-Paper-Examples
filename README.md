@@ -9,7 +9,8 @@ dynamic optimization and scientific machine learning in Julia*:
 - optimal experimental design with CorleoneOED.jl (Section 3.3),
 
 including the BenchmarkTools timings of Appendix A and the figures of Sections 3.2 and 3.3.
-Corleone.jl itself is developed at <https://github.com/SciML/Corleone.jl>.
+Corleone.jl itself is developed at <https://github.com/SciML/Corleone.jl>. This repository is archived
+on Zenodo: [doi:10.5281/zenodo.24551107](https://doi.org/10.5281/zenodo.24551107) (version v1.0.0-zenodo).
 
 ## Layout
 
