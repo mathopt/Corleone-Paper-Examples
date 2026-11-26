@@ -11,7 +11,7 @@ abstract: >-
 version: v1.0.0
 license: MIT
 repository-code: https://github.com/mathopt/Corleone-Paper-Examples
-doi: 10.5281/zenodo.24551107
+doi: 10.5281/zenodo.24551106
 keywords:
   - Julia
   - optimal control

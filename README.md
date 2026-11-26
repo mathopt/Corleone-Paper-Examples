@@ -11,7 +11,8 @@ dynamic optimization and scientific machine learning in Julia*:
 including the BenchmarkTools timings of Appendix A and the figures of Section 3. The results of
 the paper are part of the repository in `results/`.
 Corleone.jl itself is developed at <https://github.com/SciML/Corleone.jl>. This repository is archived
-on Zenodo: [doi:10.5281/zenodo.24551107](https://doi.org/10.5281/zenodo.24551107) (version v1.0.0-zenodo).
+on Zenodo: [doi:10.5281/zenodo.24551106](https://doi.org/10.5281/zenodo.24551106) (all versions; the paper uses
+v1.0.1, [doi:10.5281/zenodo.24553574](https://doi.org/10.5281/zenodo.24553574)).
 
 ## Layout
 
