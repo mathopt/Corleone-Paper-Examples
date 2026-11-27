@@ -1,0 +1,8 @@
+single  none       variables =  48  iterations =  14  objective = 1.345635
+bad     initial    variables =  59  iterations =  51  objective = 1.345633
+bad     reference  variables =  59  iterations =  23  objective = 1.345633
+K11     initial    variables =  81  iterations =  47  objective = 1.345633
+K11     reference  variables =  81  iterations =  19  objective = 1.345633
+K47     initial    variables = 189  iterations =  20  objective = 1.345632
+K47     reference  variables = 189  iterations =  17  objective = 1.345632
+threads = 4

@@ -7,27 +7,27 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 
 Single shooting: objective = 1.3456328789516294, iterations = 141, variables = 48
 BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
- Range (min … max):  335.753 ms … 407.865 ms  ┊ GC (min … max):  9.22% … 7.88%
- Time  (median):     340.400 ms               ┊ GC (median):    10.26%
- Time  (mean ± σ):   347.974 ms ±  21.543 ms  ┊ GC (mean ± σ):   9.64% ± 1.37%
+ Range (min … max):  323.563 ms … 340.241 ms  ┊ GC (min … max): 10.21% … 9.58%
+ Time  (median):     327.872 ms               ┊ GC (median):    10.45%
+ Time  (mean ± σ):   328.807 ms ±   4.954 ms  ┊ GC (mean ± σ):  10.06% ± 1.84%
 
-  ▁▁▁██      █                                                ▁  
-  █████▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-  336 ms           Histogram: frequency by time          408 ms <
+  ▁    ▁█      ▁    ▁▁     ▁         ▁                        ▁  
+  █▁▁▁▁██▁▁▁▁▁▁█▁▁▁▁██▁▁▁▁▁█▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  324 ms           Histogram: frequency by time          340 ms <
 
  Memory estimate: 487.32 MiB, allocs estimate: 6080777.
 
-Multiple shooting: objective = 1.3456313301016707, max. continuity residual = 6.108940020510545e-10, iterations = 197, variables = 59, threads = 4
-BenchmarkTools.Trial: 10 samples with 1 evaluation per sample.
- Range (min … max):  431.078 ms … 673.814 ms  ┊ GC (min … max): 16.50% … 40.73%
- Time  (median):     455.823 ms               ┊ GC (median):    16.38%
- Time  (mean ± σ):   489.196 ms ±  83.625 ms  ┊ GC (mean ± σ):  20.89% ±  7.69%
-
-  ▁ █ ▁ █▁  ▁                                   ▁             ▁  
-  █▁█▁█▁██▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-  431 ms           Histogram: frequency by time          674 ms <
-
- Memory estimate: 1.39 GiB, allocs estimate: 14148625.
-
+single  none       variables =  48  iterations =  14  objective = 1.345635
+bad     initial    variables =  59  iterations =  51  objective = 1.345633
+bad     reference  variables =  59  iterations =  23  objective = 1.345633
+K11     initial    variables =  81  iterations =  47  objective = 1.345633
+K11     reference  variables =  81  iterations =  19  objective = 1.345633
+K47     initial    variables = 189  iterations =  20  objective = 1.345632
+K47     reference  variables = 189  iterations =  17  objective = 1.345632
+threads = 4
 saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/fishing-single-shooting.pdf
-saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/fishing-multiple-shooting-initial.pdf
+saved /home/alcap/Documents/CorleonePaperFiles/code/examples/results/fishing-shooting-grids-initial.pdf
+
+real	2m51.946s
+user	3m12.878s
+sys	0m1.757s

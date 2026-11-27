@@ -16,6 +16,7 @@ julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
 RUN_MINLP="${RUN_MINLP:-true}" BENCHMARK_SAMPLES="${BENCHMARK_SAMPLES:-10}" \
     julia --project=. --threads="${THREADS:-4}" scripts/run_all.jl 2>&1 | tee "$RESULTS_DIR/benchmarks.log"
+julia --project=. --threads="${THREADS:-4}" examples/fishing_shooting_grids.jl 2>&1 | tee "$RESULTS_DIR/fishing_shooting_grids.log"
 julia --project=. --threads="${THREADS:-4}" figures/fishing_figure.jl 2>&1 | tee "$RESULTS_DIR/fishing_figure.log"
 julia --project=. figures/ude_figure.jl 2>&1 | tee "$RESULTS_DIR/ude_figure.log"
 julia --project=. figures/oed_figure.jl 2>&1 | tee "$RESULTS_DIR/oed_figure.log"

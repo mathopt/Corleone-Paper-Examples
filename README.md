@@ -4,7 +4,7 @@ Reproduces Section 3 and Appendix A of the paper *Corleone.jl: A modular shootin
 dynamic optimization and scientific machine learning in Julia*:
 
 - optimal control of the Lotka–Volterra fishing problem with single shooting, multiple shooting,
-  and integer controls (Section 3.1),
+  different shooting grids and initializations, and integer controls (Section 3.1),
 - a universal differential equation fitted with CorleoneInverse.jl (Section 3.2),
 - optimal experimental design with CorleoneOED.jl (Section 3.3),
 
@@ -44,7 +44,8 @@ Everything is written to `results/`, which holds the output of the run reported 
 | `benchmarks.log` | output of all examples (objective values, iterations, BenchmarkTools trials), `InteractiveUtils.versioninfo()`, and the summary table of Appendix A |
 | `benchmarks.json` | BenchmarkTools trials (read with `BenchmarkTools.load`) |
 | `scaling_threads_<n>.log` | scaling study of Appendix A with n threads (`scripts/scaling.sh`) |
-| `fishing-single-shooting.pdf`, `fishing-multiple-shooting-initial.pdf` (and `.png`) | figures of Section 3.1 (log: `fishing_figure.log`) |
+| `fishing_shooting_grids.log` | iteration counts of the shooting grids and initializations of Section 3.1 (`examples/fishing_shooting_grids.jl`) |
+| `fishing-single-shooting.pdf`, `fishing-shooting-grids-initial.pdf` (and `.png`) | figures of Section 3.1 (log: `fishing_figure.log`) |
 | `ude-fit.pdf`, `ude-fit.png` | figure of Section 3.2 (log: `ude_figure.log`) |
 | `oed-optimal-design.pdf`, `oed-optimal-design.png` | figure of Section 3.3 (log: `oed_figure.log`) |
 
@@ -60,6 +61,7 @@ Single examples, from the root of the repository:
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
 julia --project=. examples/fishing_single_shooting.jl
 julia --project=. -t 4 examples/fishing_multiple_shooting.jl
+julia --project=. -t 4 examples/fishing_shooting_grids.jl
 julia --project=. examples/ude.jl
 julia --project=. examples/oed.jl
 julia --project=. -t 4 scripts/run_all.jl   # all examples (RUN_MINLP=true for the integer example)
@@ -84,6 +86,7 @@ docker run --rm -v "$PWD/results":/work/results corleone-paper
 | `examples/fishing_multiple_shooting.jl` | Section 3.1, multiple shooting (four threads) |
 | `examples/fishing_multiple_shooting_sparse_jacobian.jl` | Section 3.1, multiple shooting with sparse constraint Jacobian |
 | `examples/fishing_multiple_shooting_sparse_hessian.jl` | Section 3.1, multiple shooting with sparse Jacobian and exact sparse Lagrangian Hessian |
+| `examples/fishing_shooting_grids.jl` | Section 3.1, shooting grids and initializations of the lifted states (exact sparse Hessian; iteration counts only, no timings; not part of `scripts/run_all.jl`) |
 | `examples/fishing_multiple_shooting_scaling.jl`, `scripts/scaling.sh` | scaling study of Appendix A (shooting nodes and threads; not part of `scripts/run.sh`) |
 | `examples/fishing_minlp.jl` | Section 3.1, integer controls (Juniper and Ipopt) |
 | `examples/fishing_cia.jl` | Section 3.1, sum-up rounding of the relaxed fishing control |
@@ -94,7 +97,7 @@ docker run --rm -v "$PWD/results":/work/results corleone-paper
 | `figures/fishing_figure.jl`, `figures/ude_figure.jl`, `figures/oed_figure.jl` | figures of Sections 3.1, 3.2, and 3.3 |
 | `scripts/run.sh` | runs everything |
 
-Each example script states the problem as in the paper's listing, solves it once, prints the key
+Each example script (except `fishing_shooting_grids.jl`) states the problem as in the paper's listing, solves it once, prints the key
 numbers, and reports the wall-clock time of the solve with `BenchmarkTools.@benchmark`
 (compilation and problem construction excluded). Differences to the listings in the paper:
 
